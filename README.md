@@ -12,11 +12,14 @@ To start STORM, you should first install the dependencies in requirements.txt wi
 conda install -n your_env_name --file requirements.txt
 ```
 
-Demo image datasets are put here in the form of zip, for total image datasets, see:(https://baidu.com).
+Demo image datasets are put here in the form of zip, for total image datasets, see: (https://pan.quark.cn/s/2f890f0cb26e)
 
 You can also change the configuration through config.yaml in our projects.
 
 ## Use
+
+Demo video is also available in https://pan.quark.cn/s/2f890f0cb26e for you to grasp a brief intrdoduction.
+
 To use with more flexiability, use the following command for brief usage with only text mode available and no UI:
 
 ```bash
