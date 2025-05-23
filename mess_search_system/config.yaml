@@ -1,0 +1,12 @@
+index_path: "C:/Users/admin/Desktop/信息检索系统/mess_search_system/static_data/inverted_index.json"
+idf_path: "C:/Users/admin/Desktop/信息检索系统/mess_search_system/static_data/idf_values.json"
+docs_path: "C:/Users/admin/Desktop/信息检索系统/mess_search_system/text_data/reddit_detailed_id.jsonl"
+top_k: 3
+using_stem: true
+
+image_index: "C:/Users/admin/Desktop/信息检索系统/mess_search_system/static_data/inverted_index_version_large.json"
+image_idf: "C:/Users/admin/Desktop/信息检索系统/mess_search_system/static_data/idf_values_version_large.json"
+image_docs: "C:/Users/admin/Desktop/信息检索系统/mess_search_system/version_data_large/tmp-1/final_detailed.jsonl"
+image_stem: true
+image_topk: 3
+image_base: "C:/Users/admin/Desktop/信息检索系统/mess_search_system/version_data_large/tmp-1"

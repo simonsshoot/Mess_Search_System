@@ -1,0 +1,327 @@
+<!DOCTYPE html><html><head>
+      <title>intro</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\admin\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+#nice {
+  line-height: 1.8;
+  color: #2b2b2b;
+  font-family: Optima-Regular, Optima, PingFangTC-Light, PingFangSC-light, PingFangTC-light;
+  letter-spacing: 2px;
+  background-image: linear-gradient(90deg, rgba(50, 0, 0, 0.04) 3%, rgba(0, 0, 0, 0) 3%), linear-gradient(360deg, rgba(50, 0, 0, 0.04) 3%, rgba(0, 0, 0, 0) 3%);
+  background-size: 20px 20px;
+  background-position: center center;
+}
+p {
+  font-size: 15px !important;
+}
+/* 一级标题 */
+h1 {
+  display: table;
+  margin: 30px auto 20px auto !important;
+  padding: 10px !important;
+  background-image: linear-gradient(to left, #fdd5e7, #c2e2f9);
+  border-width: 1px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #ccc;
+  font-size: 20px !important;
+  text-align: center;
+}
+h2 {
+  display: table;
+  margin: 30px auto 20px auto !important;
+  padding: 0px 10px !important;
+  border-bottom: 5px solid #205792;
+  text-align: center;
+  font-size: 18px !important;
+}
+/* 三级标题 */
+h3 {
+  border-bottom: #2b2b2b;
+}
+h3:before {
+  content: "✒️ ";
+}
+h4:before {
+  content: "✏️";
+}
+h5 {
+  background-color: #f1f1f1;
+  border-left: 5px solid #fff;
+  padding-left: 5px !important;
+  box-shadow: -3px 0px #205792;
+}
+h6 {
+  border-left: 5px solid rgba(0, 0, 0, 0);
+  box-shadow: 0px 2px #205792;
+}
+img {
+  width: 95%;
+  margin: 5px auto 8px auto !important;
+  border-radius: 5px;
+  box-shadow: 3px 2px 3px #ccc;
+}
+strong {
+  color: #ff4c00 !important;
+}
+em {
+  font-weight: 800;
+  font-style: normal !important;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="storm信息检索系统报告">STORM信息检索系统报告 </h1>
+<center>2022211301班  杨枭   钱文滔   苏柏闻</center>
+<p>  我们实现了要求的信息检索系统，并将其命名为<strong>STORM</strong>（飓风信息检索系统），系统前端UI友好，支持查找高亮，支持词干提取，数据丰富，鲁棒性强，同时实现了多模态信息检索。</p>
+<h2 id="作业要求">作业要求 </h2>
+<p>  基本要求：设计并实现一个信息检索系统，中、英文皆可，数据源可以自选，数据通过开源的网络爬虫获取，规模不低于100篇文档，进行本地存储。中文可以分词（可用开源代码），也可以不分词，直接使用字作为基本单元。英文可以直接通过空格分隔。构建基本的倒排索引文件。实现基本的向量空间检索模型的匹配算法。用户查询输入为自然语言字串，查询结果输出按相关度从大到小排序，列出相关度、文档题目、主要匹配内容、URL、文档日期等信息。最好能对检索结果的准确率进行人工评价。界面不做强制要求，可以是命令行，也可以是可操作的界面。提交作业报告和源代码。</p>
+<p>  扩展要求：鼓励有兴趣和有能力的同学积极尝试多媒体信息检索以及优化各模块算法，也可关注各类相关竞赛。自主开展相关文献调研与分析，完成算法评估、优化、论证创新点的过程。</p>
+<h2 id="系统实现">系统实现 </h2>
+<h3 id="数据源">数据源 </h3>
+<p>  我们未选择现有数据集，而是重新通过爬虫实现reddit上帖子的爬取，我们选择reddit帖子集合中TrueOpinion板块部分热帖共计<strong>810</strong>篇，部分数据参考如下：<br>
+<img src="md_pics/data_exa.png" alt="图片显示失败"><br>
+我们爬虫的部分代码如下：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-import">import</span> praw
+<span class="token keyword keyword-import">import</span> jsonlines
+<span class="token keyword keyword-import">import</span> requests
+<span class="token keyword keyword-import">import</span> time
+<span class="token keyword keyword-import">import</span> os
+<span class="token keyword keyword-import">import</span> urllib<span class="token punctuation">.</span>request
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"系统级代理配置:"</span><span class="token punctuation">,</span> urllib<span class="token punctuation">.</span>request<span class="token punctuation">.</span>getproxies<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"当前代理环境变量:"</span><span class="token punctuation">,</span> os<span class="token punctuation">.</span>environ<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https_proxy'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+reddit_read_only <span class="token operator">=</span> praw<span class="token punctuation">.</span>Reddit<span class="token punctuation">(</span>
+    client_id<span class="token operator">=</span><span class="token string">"2VYEF43NKc5Fgy4tyVrpRA"</span><span class="token punctuation">,</span>
+    client_secret<span class="token operator">=</span><span class="token string">"5G89AoMDmT4tkHC2e1i2M316YM_Sjg"</span><span class="token punctuation">,</span>
+    user_agent<span class="token operator">=</span><span class="token string">"simonsshoot"</span><span class="token punctuation">,</span>  <span class="token comment"># 按规范格式修改</span>
+    proxies<span class="token operator">=</span><span class="token punctuation">{</span>
+        <span class="token string">"http"</span><span class="token punctuation">:</span> <span class="token string">"http://127.0.0.1:7890"</span><span class="token punctuation">,</span>
+        <span class="token string">"https"</span><span class="token punctuation">:</span> <span class="token string">"http://127.0.0.1:7890"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+
+subreddit <span class="token operator">=</span> reddit_read_only<span class="token punctuation">.</span>subreddit<span class="token punctuation">(</span><span class="token string">"pics"</span><span class="token punctuation">)</span>
+count<span class="token operator">=</span><span class="token number">0</span>
+<span class="token comment"># 打开 jsonl 文件以写入数据</span>
+<span class="token keyword keyword-with">with</span> jsonlines<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"urls.jsonl"</span><span class="token punctuation">,</span> mode<span class="token operator">=</span><span class="token string">"w"</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> writer<span class="token punctuation">:</span>
+    <span class="token comment"># 遍历热帖并写入 URL</span>
+    <span class="token keyword keyword-for">for</span> post <span class="token keyword keyword-in">in</span> subreddit<span class="token punctuation">.</span>top<span class="token punctuation">(</span>limit<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        count<span class="token operator">+=</span><span class="token number">1</span>
+        <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"start^"</span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-if">if</span> count<span class="token operator">%</span><span class="token number">40</span><span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">:</span>
+            time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+            <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"sleep 3s"</span><span class="token punctuation">)</span>
+        data <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token string">"title"</span><span class="token punctuation">:</span> post<span class="token punctuation">.</span>title<span class="token punctuation">,</span>  <span class="token comment"># 帖子标题</span>
+            <span class="token string">"url"</span><span class="token punctuation">:</span> post<span class="token punctuation">.</span>url       <span class="token comment"># 帖子详细 URL</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"fetch post: "</span><span class="token punctuation">,</span>post<span class="token punctuation">.</span>title<span class="token punctuation">)</span>
+        writer<span class="token punctuation">.</span>write<span class="token punctuation">(</span>data<span class="token punctuation">)</span>  <span class="token comment"># 写入 JSONL 文件</span>
+
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"爬取完成，数据已写入文件中。"</span><span class="token punctuation">)</span>
+</code></pre><h3 id="前端ui设计">前端UI设计 </h3>
+<p>  为了进一步方便用户使用我们的信息检索系统，我们通过PyQt5实现了一个<strong>可以交互的UI界面</strong>，参考如下：<br>
+<img src="md_pics/ui_exa.png" alt="图片显示失败"><br>
+前端代码主要在query_window.py中，简单的流程为首先搭建整体的布局，如：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">initUI</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>setWindowTitle<span class="token punctuation">(</span><span class="token string">'Search System'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setGeometry<span class="token punctuation">(</span><span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">800</span><span class="token punctuation">)</span>
+        
+        self<span class="token punctuation">.</span>set_background<span class="token punctuation">(</span><span class="token string">"pictures/background.jpg"</span><span class="token punctuation">)</span>
+        
+        <span class="token comment">#主容器</span>
+        main_widget <span class="token operator">=</span> QWidget<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        main_widget<span class="token punctuation">.</span>setAttribute<span class="token punctuation">(</span>Qt<span class="token punctuation">.</span>WA_TranslucentBackground<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setCentralWidget<span class="token punctuation">(</span>main_widget<span class="token punctuation">)</span>
+        
+        <span class="token comment">#主布局</span>
+        main_layout <span class="token operator">=</span> QVBoxLayout<span class="token punctuation">(</span>main_widget<span class="token punctuation">)</span>
+        main_layout<span class="token punctuation">.</span>setContentsMargins<span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">,</span> <span class="token number">60</span><span class="token punctuation">)</span>
+        main_layout<span class="token punctuation">.</span>setSpacing<span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span>
+        
+        self<span class="token punctuation">.</span>setup_search_area<span class="token punctuation">(</span>main_layout<span class="token punctuation">)</span>
+        
+        <span class="token comment">#结果展示区域</span>
+        self<span class="token punctuation">.</span>setup_results_area<span class="token punctuation">(</span>main_layout<span class="token punctuation">)</span>
+        
+    <span class="token keyword keyword-def">def</span> <span class="token function">set_background</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> image_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        palette <span class="token operator">=</span> self<span class="token punctuation">.</span>palette<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        background <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span>image_path<span class="token punctuation">)</span><span class="token punctuation">.</span>scaled<span class="token punctuation">(</span>
+            self<span class="token punctuation">.</span>size<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+            Qt<span class="token punctuation">.</span>KeepAspectRatioByExpanding<span class="token punctuation">,</span> 
+            Qt<span class="token punctuation">.</span>SmoothTransformation
+        <span class="token punctuation">)</span>
+        palette<span class="token punctuation">.</span>setBrush<span class="token punctuation">(</span>QPalette<span class="token punctuation">.</span>Window<span class="token punctuation">,</span> QBrush<span class="token punctuation">(</span>background<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setPalette<span class="token punctuation">(</span>palette<span class="token punctuation">)</span>
+</code></pre><p>其次，为这些构件添加信号槽函数，在用户交互时执行相应的动作，如：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>#启动搜索线程
+self.search_worker = SearchWorker(self.current_scorer, query)
+self.search_worker.finished.connect(self.display_results)
+self.search_worker.start()
+</code></pre><p>在完成动作函数设计后（动态函数也涉及与后端的交互），还需要前端进行结果的渲染，如show_loading和display_results等函数：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>    <span class="token keyword keyword-def">def</span> <span class="token function">show_loading</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        loading <span class="token operator">=</span> QLabel<span class="token punctuation">(</span><span class="token string">"Searching..."</span><span class="token punctuation">)</span>
+        loading<span class="token punctuation">.</span>setStyleSheet<span class="token punctuation">(</span><span class="token triple-quoted-string string">"""
+            QLabel {
+                color: #444444;
+                font-size: 16px;
+            }
+        """</span><span class="token punctuation">)</span>
+        loading<span class="token punctuation">.</span>setAlignment<span class="token punctuation">(</span>Qt<span class="token punctuation">.</span>AlignCenter<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>results_layout<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>loading<span class="token punctuation">)</span>
+</code></pre><h3 id="后端模块设计">后端模块设计 </h3>
+<h4 id="buildingindexpy"><a href="http://buildingindex.py">buildingindex.py</a> </h4>
+<p>  该模块主要实现了倒排索引的构建，在这里，我们考虑到查找词的不同形式可能表示同样的意思（如查询running，查询结果可包含run、runs等不同形式），我们<strong>扩展加入了词干查找功能</strong>并引入PorterStemmer库来实现词干提取。</p>
+<p>  倒排索引的构建流程为维护一个词到文档id集合的映射，对于每一个出现的词，应该记录这个词在哪些文档中出现，如：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>    <span class="token keyword keyword-def">def</span> <span class="token function">process_doc</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>doc_id<span class="token punctuation">,</span>text<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment">#文档中的词添加到倒排文件中</span>
+        terms<span class="token operator">=</span>self<span class="token punctuation">.</span>_tokenize<span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+        <span class="token keyword keyword-for">for</span> term <span class="token keyword keyword-in">in</span> terms<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>inverted_index<span class="token punctuation">[</span>term<span class="token punctuation">]</span><span class="token punctuation">.</span>add<span class="token punctuation">(</span>doc_id<span class="token punctuation">)</span>
+
+    <span class="token keyword keyword-def">def</span> <span class="token function">build_from_file</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>file_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-with">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>file_path<span class="token punctuation">,</span><span class="token string">'r'</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword keyword-as">as</span> f<span class="token punctuation">:</span>
+            <span class="token keyword keyword-for">for</span> line_num<span class="token punctuation">,</span>line <span class="token keyword keyword-in">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword keyword-try">try</span><span class="token punctuation">:</span>
+                    data<span class="token operator">=</span>json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>line<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    doc_id<span class="token operator">=</span>data<span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span>
+                    text<span class="token operator">=</span>data<span class="token punctuation">[</span><span class="token string">'article'</span><span class="token punctuation">]</span>
+                    self<span class="token punctuation">.</span>process_doc<span class="token punctuation">(</span>doc_id<span class="token punctuation">,</span>text<span class="token punctuation">)</span>
+                    self<span class="token punctuation">.</span>tot_docs<span class="token operator">+=</span><span class="token number">1</span>
+                <span class="token keyword keyword-except">except</span> <span class="token punctuation">(</span>KeyError<span class="token punctuation">,</span>json<span class="token punctuation">.</span>JSONDecodeError<span class="token punctuation">)</span><span class="token keyword keyword-as">as</span> e<span class="token punctuation">:</span>
+                    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"error processing in line </span><span class="token interpolation"><span class="token punctuation">{</span>line_num<span class="token punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">{</span>e<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+                    <span class="token keyword keyword-continue">continue</span>
+                <span class="token keyword keyword-except">except</span> Exception <span class="token keyword keyword-as">as</span> e<span class="token punctuation">:</span>
+                    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"unexpected error in line </span><span class="token interpolation"><span class="token punctuation">{</span>line_num<span class="token punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token punctuation">{</span>e<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+                    <span class="token keyword keyword-continue">continue</span>
+</code></pre><p>不仅如此，该模块中还实现了对词idf的统计以及词干提取的部分实现，详情可查看源代码，比如对于idf的计算：<br>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.25em" columnalign="right" columnspacing=""><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mtext>IDF</mtext><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>log</mi><mo>⁡</mo><mrow><mo fence="true">(</mo><mfrac><mi>N</mi><mrow><mi>d</mi><mi>f</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mfrac><mo fence="true">)</mo></mrow></mrow><mrow><mi>log</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mfrac></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+\text{IDF}(t) = \frac{\log \left( \frac{N}{df(t)} \right)}{\log(b)}
+\end{aligned}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.426em;vertical-align:-1.463em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.963em;"><span style="top:-3.963em;"><span class="pstrut" style="height:4.19em;"></span><span class="mord"><span class="mord text"><span class="mord">IDF</span></span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.19em;"><span style="top:-2.464em;"><span class="pstrut" style="height:3.15em;"></span><span class="mord"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mopen">(</span><span class="mord mathnormal">b</span><span class="mclose">)</span></span></span><span style="top:-3.38em;"><span class="pstrut" style="height:3.15em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-4.19em;"><span class="pstrut" style="height:3.15em;"></span><span class="mord"><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">df</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight">t</span><span class="mclose mtight">)</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.463em;"><span></span></span></span></span></span></span></span></span></span></span></span><br>
+有对应代码实现：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>    <span class="token keyword keyword-def">def</span> <span class="token function">compute_idf</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>base<span class="token operator">=</span>math<span class="token punctuation">.</span>e<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-if">if</span> self<span class="token punctuation">.</span>tot_docs<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword keyword-raise">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">"no document yet"</span><span class="token punctuation">)</span>
+        idf_values<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token keyword keyword-for">for</span> term<span class="token punctuation">,</span>doc_ids <span class="token keyword keyword-in">in</span> self<span class="token punctuation">.</span>inverted_index<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            df<span class="token operator">=</span><span class="token builtin">len</span><span class="token punctuation">(</span>doc_ids<span class="token punctuation">)</span>
+            idf<span class="token operator">=</span>math<span class="token punctuation">.</span>log<span class="token punctuation">(</span>self<span class="token punctuation">.</span>tot_docs<span class="token operator">/</span>df<span class="token punctuation">)</span><span class="token operator">/</span>math<span class="token punctuation">.</span>log<span class="token punctuation">(</span>base<span class="token punctuation">)</span>
+            idf_values<span class="token punctuation">[</span>term<span class="token punctuation">]</span><span class="token operator">=</span>idf
+        <span class="token keyword keyword-return">return</span> idf_values
+</code></pre><h4 id="lucenepy"><a href="http://lucene.py">lucene.py</a> </h4>
+<p>  作业二中关于匹配算法建议采用基本的向量空间检索模型，即将单词表示为向量，并通过比较余项相似度来查找，这个实现是非常简单的，如下：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>        <span class="token keyword keyword-def">def</span> <span class="token function">cosine_similarity_matrix</span><span class="token punctuation">(</span>q<span class="token punctuation">,</span> k<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            q_norm <span class="token operator">=</span> F<span class="token punctuation">.</span>normalize<span class="token punctuation">(</span>q<span class="token punctuation">,</span>dim<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+            k_norm <span class="token operator">=</span> F<span class="token punctuation">.</span>normalize<span class="token punctuation">(</span>k<span class="token punctuation">,</span>dim<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+            cosine_similarity <span class="token operator">=</span> q_norm@k_norm<span class="token punctuation">.</span>T
+            
+            <span class="token keyword keyword-return">return</span> cosine_similarity
+</code></pre><p>  值得注意的是，这样的处理是把每个单词的查询权重简单地设为一样，即搜索“the sunshine”时，the和sunshine贡献几乎相同，这可能不合理。所以我们通过查询，<strong>引入Lucene评分机制</strong>，通过控制词汇的权重，使得查找更具有针对性，Lucene的评分机制如下：</p>
+<p><img src="md_pics/lucene.png" alt="图片显示失败"></p>
+<p>对应代码实现为：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-def">def</span> <span class="token function">compute_score</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>query<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    words <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'\w+'</span><span class="token punctuation">,</span> query<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    stems <span class="token operator">=</span> <span class="token punctuation">[</span>self<span class="token punctuation">.</span>stemmer<span class="token punctuation">.</span>stem<span class="token punctuation">(</span>word<span class="token punctuation">)</span> <span class="token keyword keyword-for">for</span> word <span class="token keyword keyword-in">in</span> words<span class="token punctuation">]</span> <span class="token keyword keyword-if">if</span> self<span class="token punctuation">.</span>using_stem <span class="token keyword keyword-else">else</span> words
+    valid_terms <span class="token operator">=</span> <span class="token punctuation">[</span>term <span class="token keyword keyword-for">for</span> term <span class="token keyword keyword-in">in</span> stems <span class="token keyword keyword-if">if</span> term <span class="token keyword keyword-in">in</span> self<span class="token punctuation">.</span>index<span class="token punctuation">]</span>
+    
+    <span class="token keyword keyword-if">if</span> <span class="token keyword keyword-not">not</span> valid_terms<span class="token punctuation">:</span>
+        <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"no valid terms found"</span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-return">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    sum_squared <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>idf<span class="token punctuation">.</span>get<span class="token punctuation">(</span>term<span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">)</span> <span class="token operator">**</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token keyword keyword-for">for</span> term <span class="token keyword keyword-in">in</span> valid_terms<span class="token punctuation">)</span>
+    query_norm <span class="token operator">=</span> <span class="token number">1.0</span> <span class="token operator">/</span> math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>sum_squared<span class="token punctuation">)</span> <span class="token keyword keyword-if">if</span> sum_squared <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token keyword keyword-else">else</span> <span class="token number">1.0</span>
+
+    contained_docs<span class="token operator">=</span>self<span class="token punctuation">.</span>query_process<span class="token punctuation">(</span>query<span class="token punctuation">)</span>
+    doc_scores<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword keyword-for">for</span> doc_id <span class="token keyword keyword-in">in</span> contained_docs<span class="token punctuation">:</span>
+      tot_score<span class="token operator">=</span><span class="token number">0</span>
+      matched_terms<span class="token operator">=</span><span class="token number">0</span>
+      meta<span class="token operator">=</span>self<span class="token punctuation">.</span>images_meta<span class="token punctuation">.</span>get<span class="token punctuation">(</span>doc_id<span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> 
+      length_norm <span class="token operator">=</span> <span class="token number">1.0</span> <span class="token operator">/</span> math<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>meta<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'length'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token keyword keyword-for">for</span> term <span class="token keyword keyword-in">in</span> valid_terms<span class="token punctuation">:</span>
+        <span class="token keyword keyword-if">if</span> doc_id <span class="token keyword keyword-in">in</span> self<span class="token punctuation">.</span>index<span class="token punctuation">[</span>term<span class="token punctuation">]</span><span class="token punctuation">:</span>
+          tf<span class="token operator">=</span><span class="token number">1</span>
+          idf<span class="token operator">=</span>self<span class="token punctuation">.</span>idf<span class="token punctuation">.</span>get<span class="token punctuation">(</span>term<span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">)</span>
+
+          boost<span class="token operator">=</span><span class="token number">1.0</span>
+          term_contrib<span class="token operator">=</span>tf<span class="token operator">*</span>idf<span class="token operator">*</span>idf<span class="token operator">*</span>boost<span class="token operator">*</span>length_norm
+          tot_score<span class="token operator">+=</span>term_contrib
+          matched_terms<span class="token operator">+=</span><span class="token number">1</span>
+      coord<span class="token operator">=</span>matched_terms<span class="token operator">/</span><span class="token builtin">len</span><span class="token punctuation">(</span>valid_terms<span class="token punctuation">)</span> <span class="token keyword keyword-if">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>valid_terms<span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">0</span> <span class="token keyword keyword-else">else</span> <span class="token number">0.0</span>
+
+      final_score<span class="token operator">=</span>coord<span class="token operator">*</span>query_norm<span class="token operator">*</span>tot_score
+      doc_scores<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>doc_id<span class="token punctuation">,</span>final_score<span class="token punctuation">)</span><span class="token punctuation">)</span>
+      top_k<span class="token operator">=</span><span class="token builtin">min</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>top_K<span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>doc_scores<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>doc_scores<span class="token punctuation">,</span>key<span class="token operator">=</span><span class="token keyword keyword-lambda">lambda</span> x<span class="token punctuation">:</span>x<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>reverse<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span>top_k<span class="token punctuation">]</span>
+</code></pre><h4 id="outputspy"><a href="http://outputs.py">outputs.py</a> </h4>
+<p>  这部分主要是对输出进行处理，根据Lucene评分的top_k结果，输出相关度、文档题目、主要匹配内容、URL、文档日期等信息，并以更为友好的前端形式呈现。</p>
+<p>  比如，我们在返回结果中实现了<strong>匹配内容的高亮处理</strong>（可以看第一张图），具体的代码基于正则表达式匹配，并对匹配内容进行html形式的加工，如下：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>  <span class="token keyword keyword-def">def</span> <span class="token function">_highlight_terms</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> text<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">str</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-if">if</span> <span class="token keyword keyword-not">not</span> self<span class="token punctuation">.</span>_query_terms<span class="token punctuation">:</span>
+        <span class="token keyword keyword-return">return</span> text
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>_original_query<span class="token punctuation">)</span>
+    pattern <span class="token operator">=</span> <span class="token string">r'\b({})\b'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">'|'</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token builtin">map</span><span class="token punctuation">(</span>re<span class="token punctuation">.</span>escape<span class="token punctuation">,</span> self<span class="token punctuation">.</span>_original_query<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span>pattern<span class="token punctuation">,</span> 
+                <span class="token string">r'&lt;span style="font-weight: bold; color: #e74c3c;"&gt;\1&lt;/span&gt;'</span><span class="token punctuation">,</span> 
+                text<span class="token punctuation">,</span> 
+                flags<span class="token operator">=</span>re<span class="token punctuation">.</span>IGNORECASE<span class="token punctuation">)</span>
+</code></pre><h2 id="环境与可持续化发展思考">环境与可持续化发展思考 </h2>
+<p>  一个良好的搜索系统，首先应该是“绿色发展”的，为了实现查找内容的绿色、健康，我们可以<strong>通过实现Lucene评分公式中t.getBoost()</strong>，即对于绿色单词的权重，我们将其设置的更高，这样在查询中它的影响力会更大，系统也就更倾向于返回绿色化结果（这也是我们引入Lucene的原因之一）。</p>
+<p>  此外，我们的所有数据集均遵从开源规范和reddit数据使用协议，并通过人工校验的方式确认了数据集的无害性，这进一步保证了系统的健康使用。</p>
+<p>  我们将所有的代码和数据集同步开源至<a href="https://github.com/simonsshoot/Mess_Search_System">Mess Search System 项目仓库</a>，并提供详细的说明（注：项目为github仓库，可能需要梯子才能访问），希望能帮助更多的人更好地理解和使用信息检索系统，为其绿色、可持续化发展贡献一份绵薄之力。</p>
+<h2 id="鲁棒性与人工评价">鲁棒性与人工评价 </h2>
+<p>  为了评估我们的系统，我们对其进行了大量的测试，包括单个单词以及多个单词组，并进行人工的准确度评价，一个示意如下：<br>
+<img src="md_pics/eval_exa.png" alt="图片显示失败"></p>
+<p>  搜索trump call on people，返回的帖子中均有内容和这些词有关，并包含正确的url和从大到小的top_k结果，这说明我们的系统基本符合预期。</p>
+<h2 id="多媒体信息检索">多媒体信息检索 </h2>
+<p>  随着人们对多媒体信息的需求越来越强烈，我们也在探索多媒体信息检索的相关领域，我们的系统也因此实现了图片的检索，数据集同样来源于reddit的pics板块并通过爬虫获取。我们系统依赖的完整数据集包括<strong>825</strong>张高质量的图片（共计500MB），在version_data_large目录下，我们也提供了简单的demo数据集（21MB），在version_data目录下。<br>
+  在config.yaml中，可以灵活地调整相关配置信息。<br>
+<img src="md_pics/pic_exa1.png" alt="图片显示失败"><br>
+  如上图所示，搜索cat并勾选图像模式，可以看到返回结果：“在我的车上发现了邻居的猫”……</p>
+<h2 id="其他创新思考">其他创新思考 </h2>
+<p>  我们也在积极思考如何进一步提升我们的系统包括：</p>
+<ul>
+<li>
+<p><strong>更多的模态</strong>：除了文本和图片检索，我们计划引入视频内容分析（基于FFmpeg提取关键帧）和音频特征提取（如MFCC系数）。通过OpenCV和Librosa库实现跨模态特征融合，构建统一的多媒体索引，支持"以图搜视频"或"语音找相关文本"等复杂场景。</p>
+</li>
+<li>
+<p><strong>更好的搜索</strong>：引入智能纠错机制和模糊搜索，如用户搜索"AI learing framwork"时，系统自动纠正为"AI learning framework"，这一点可以通过如Glove等库实现。</p>
+</li>
+<li>
+<p><strong>更优的存储</strong>：我们在网上探索了分布式索引架构的存储机制，如采用Elasticsearch替代本地JSON存储，实现倒排索引的分片与副本机制。通过REST API支持多节点横向扩展，使数据吞吐量提升10倍以上，轻松应对百万级文档规模。</p>
+</li>
+</ul>
+<h2 id="结果演示">结果演示 </h2>
+<p>  最后给出几个查询的例子，展示我们的系统的检索效果，我们同样<strong>提供演示视频</strong>，在<a href="https://github.com/simonsshoot/Mess_Search_System">Mess Search System 项目仓库</a>中可以找到。<br>
+<img src="md_pics/show_exa1.png" alt="图片显示失败"><br>
+<img src="md_pics/show_exa2.png" alt="图片显示失败"><br>
+<img src="md_pics/pic_exa2.png" alt="图片显示失败"></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
