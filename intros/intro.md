@@ -165,20 +165,12 @@ $$
             return cosine_similarity
 ```
 &emsp;&emsp;值得注意的是，这样的处理是把每个单词的查询权重简单地设为一样，即搜索“the sunshine”时，the和sunshine贡献几乎相同，这可能不合理。所以我们通过查询，**引入Lucene评分机制**，通过控制词汇的权重，使得查找更具有针对性，Lucene的评分机制如下：
-<!-- $$
+$$
 \begin{aligned}
-\text{score}(q,d) &= \underbrace{\text{coord}(q,d)}_{\text{匹配度系数}} 
-\times \underbrace{\text{queryNorm}(q)}_{\text{查询归一化}} \\
-&\quad \times \sum_{t \in q} \Biggl[ 
-  \underbrace{\text{tf}(t \in d)}_{\text{词频}} 
-  \times \underbrace{\text{idf}(t)^2}_{\text{逆文档频率}} 
-  \times \underbrace{t.\text{getBoost}()}_{\text{词项权重}} 
-  \times \underbrace{\text{norm}(t,d)}_{\text{长度归一化}} 
-\Biggr]
+\operatorname{score}(q, d) =& \underbrace{\operatorname{coord}(q, d)}_{\text{匹配度系数}} \times \underbrace{\text{queryNorm}(q)}_{\text{查询归一化}} \\
+& \times \sum_{t \in q} \Biggl[ \underbrace{\operatorname{tf}(t \in d)}_{\text{词频}} \times \underbrace{\operatorname{idf}(t)^2}_{\text{逆文档频率}} \times \underbrace{t.\text{getBoost}()}_{\text{词项权重}} \times \underbrace{\operatorname{norm}(t, d)}_{\text{长度归一化}} \Biggr]
 \end{aligned}
-$$ -->
-![图片显示失败](md_pics/lucene.png)
-
+$$
 对应代码实现为：
 ```python
 def compute_score(self,query):
