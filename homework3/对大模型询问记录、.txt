@@ -1,0 +1,155 @@
+基本要求：设计并实现一个英文信息抽取实验系统。特定领域语料根据自己的兴趣选定，我选取了reddit上的帖子，规模大约1000篇，进行本地存储。
+我需要抽取不低于5种特定信息点。可以调用开源的中英文自然语言处理基本模块，如分句、分词、命名实体识别、句法分析。
+信息抽取算法可以根据自己的兴趣选择，至少实现正则表达式匹配算法的特定信息点抽取。
+
+我目前已经从reddit爬取下来了1000多个帖子，以下是我的爬取内容（所用手段完全合法，调用的是reddit的官方api）存储在 homework/merged_output.jsonl 中，
+我需要编写代码 homework/keyword_add.py （在代码中对外部的调用使用相对路径）从其中的article字段中的信息，以下是我需要获取的信息点。
+
+1. 找出常见的国家，地区，城市名这信息点（这部分通过正则表达式匹配算法实现，我的国家，地区，城市名信息库位于  homework/keyword/map.jsonl ，根据这里面的内容如 {"name": "Russia"}  进行匹配 ），结果保存为 "key_area" 字段。
+2. 找出公司，组织名称这信息点（这部分用nlp库实现 ），结果保存为 "key_organization" 字段。
+3. 找出人名这信息点（这部分用nlp库实现 ），结果保存为 "key_name" 字段。
+4. 找出常见的网络流行语（这部分用nlp库与我的网络流行语信息库配合实现，我的网络流行语信息库位于  homework/keyword/Internet_slang.jsonl ，根据这里面的内容如 {"name": "OMG"}  进行匹配），结果保存为 "key_internet_slang" 字段。
+5. 帮我判断文章的情绪，分为积极，消极，中立三种，结果保存为 "key_feeling" 字段。
+6. 新增两个字段，Good 和 Bad ，初始值设为 0
+
+注意：我希望在组织那边将地区和人名这两部分出现过的字段剔除
+我的代码位于 homework/keyword_add.py ，在代码中使用相对路径
+结果保存在 homework/keyword_output.jsonl 中，要求是在 homework/merged_output.jsonl  的基础上往后新增这些对应的字段，将完整的统计信息输出到一个文件 homework/statistics_report.jsonl里，每个条目分为三个项目，1. 信息点类名，如 key_area ， key_feeling。2. 信息点具体名称，比如 ”Twitter“，“积极” 等。3，具体数目。
+
+此外，nlp库有时候会错误的把 "video](https://www.youtube.com" 识别为一个组织/人名，不要把带 “https://”的当做信息点
+--------------------------------------------------------------------------------
+
+
+一、我当前已经做了以下内容：
+
+设计并实现一个英文信息抽取实验系统。我选取了reddit上的帖子作为特定领域语料，规模大约1000篇，进行本地存储。
+我抽取特定信息点。调用开源的中英文自然语言处理基本模块，如分句、分词、命名实体识别、句法分析。
+信息抽取算法可以根据自己的兴趣选择，至少实现正则表达式匹配算法的特定信息点抽取。
+
+我目前已经从reddit爬取下来了1000多个帖子，以下是我的爬取内容（所用手段完全合法，调用的是reddit的官方api）存储在 homework/keyword/primary_output.jsonl 中，
+我需要编写代码 homework/keyword/keyword_add.py （在代码中对外部的调用使用相对路径）从其中的article字段中的信息，以下是我需要获取的信息点。
+
+1. 找出常见的国家，地区，城市名这信息点（这部分用nlp库实现 ），结果保存为 "key_area" 字段。
+2. 找出公司，组织名称这信息点（这部分用nlp库实现 ），结果保存为 "key_organization" 字段。
+3. 找出人名这信息点（这部分用nlp库实现 ），结果保存为 "key_name" 字段。
+4. 找出常见的网络流行语（这部分用nlp库与我的网络流行语信息库配合实现，我的网络流行语信息库位于  homework/keyword/Internet_slang.jsonl ，根据这里面的内容如 {"name": "OMG"}  进行匹配），结果保存为 "key_internet_slang" 字段。
+5. 帮我判断文章的情绪，分为积极，消极，中立三种，结果保存为 "key_feeling" 字段。
+6. 新增两个字段，Good 和 Bad ，初始值设为 0
+
+注意：我希望在组织那边将地区和人名这两部分出现过的字段剔除
+我的代码位于 homework/keyword/keyword_add.py ，在代码中使用相对路径
+结果保存在 homework/keyword/keyword_output.jsonl 中，要求是在 homework/keyword/primary_output.jsonl  的基础上往后新增这些对应的字段，将完整的统计信息输出到一个文件 homework/keyword/statistics_report.jsonl里，每个条目分为三个项目，1. 信息点类名，如 key_area ， key_feeling。2. 信息点具体名称，比如 ”Twitter“，“积极” 等。3，具体数目。
+
+此外，nlp库有时候会错误的把 "video](https://www.youtube.com" 识别为一个组织/人名，不要把带 “https://”的当做信息点
+
+
+二、以下是我需要进行的修改：
+新增一个需要收集的信息点，要求是关于环境和社会可持续发展影响。使用手段不限，将结果保存为 "key_Green" 字段。
+
+
+
+
+
+------------------------------------
+
+
+我需要实现一个英文信息抽取实验系统。我选取了reddit上的帖子作为领域语料，规模大约1000篇，进行本地存储。并且已经实现正则表达式匹配算法的特定信息点抽取。
+我目前已经从reddit爬取下来了1000多个帖子（所用手段完全合法，调用的是reddit的官方api），存储在 homework/keyword_output.jsonl 中，并且从中已经提取到了我需要获取的信息点，有以下五个。
+
+1. 常见的国家，地区，城市名这信息点结果保存为 "key_area" 字段。
+2. 公司，组织名称这信息点结果保存为 "key_organization" 字段。
+3. 人名这信息点，结果保存为 "key_name" 字段。
+4. 常见的网络流行语，结果保存为 "key_internet_slang" 字段。
+5. 文章的情绪，分为积极，消极，中立三种，结果保存为 "key_feeling" 字段。
+
+每条信息格式如下，
+{"title": "Canada will be part of the US within the next decade or so.", 
+"article": "Usually when a leader resigns, a lot of internal struggles are happening. In this case, Canada's economy looks to be in utter shambles. Same thing happened with USSR in '91. In order to mitigate the effects of their decline, Canada will want to become part of the US and the US will definitely welcome them in because together, with all the resources both countries have and them being linguistically and culturally quite similar (as both countries are north of Mesoamerica), they would be a very powerful nation. The economies of both countries are already super connected... to the point where when the US economy is good or bad, Canada's economy follows.", 
+"id": 423, 
+"url": "https://www.reddit.com/r/TrueUnpopularOpinion/comments/1hvn1ae/canada_will_be_part_of_the_us_within_the_next/", 
+"time": "2024-12-23", 
+"key_area": ["US", "Canada", "Mesoamerica", "USSR"],
+ "key_organization": [], 
+"key_name": [], 
+"key_internet_slang": [], 
+"key_feeling": "中立",
+ "Good": 0, 
+"Bad": 0}
+
+对所有信息点，都被保存在 homework/statistics_report.jsonl 中，每条具体信息点，格式如下：
+
+{"信息点类名": "key_area", "信息点具体名称": "USA", "具体数目": 11, "包含文章ID列表": [24, 124, 233, 242, 287, 296, 335, 548, 588, 751, 783]}
+
+我希望你根据这个用python做一个前端，保存在 homework/draw_window_report.py。对于前端，根据 homework/statistics_report.jsonl ，使用两个选项表，第一个选的是查询哪一类信息点，第二个选项表的内容是第一个选项表的信息点类的具体有哪些（当第一个选项表未被选时，第二个选项表不可选），比如第一个选项表选“人名”，第二个选项表就根据第一个表的所选选项，提供“Trump”，"Li Bai"，“Tom” 之类的的选项。在两个选项表都进行了选择后，点击查询按钮，下面就会有一个个框，一个框对应一条通过  "包含文章ID列表" 在 homework/keyword_output.jsonl  中被查询到的信息，每个框内分三个部分：
+一：Title，内容为 title" 字段内容，
+二：Article:内容为"article"字段内容。
+三:：Good/Bad，显示点赞和点踩数，内容为Good/Bad字段内容，
+并给出两个按钮，赞和踩，每点一下就该信息的对应字段的数字加一，并实时保存到 homework/keyword_output.jsonl 中。
+
+-------------------------------------------------------------------------------------
+
+
+
+
+我需要实现一个英文信息抽取实验系统。我选取了reddit上的帖子作为领域语料，规模大约1000篇，进行本地存储。并且已经实现正则表达式匹配算法的特定信息点抽取。
+我目前已经从reddit爬取（所用手段完全合法，调用的是reddit的官方api）下来了1000多个帖子（存储在 homework/keyword/keyword_output.jsonl 中）和1000多张附带标题的图片（全部的标题存储于homework/image_large/title_keyword.jsonl 中，图片存储在 homework/image_large/image 中），并且从中已经提取到了我需要获取的信息点，有以下五个。
+
+1. 常见的国家，地区，城市名这信息点结果保存为 "key_area" 字段。
+2. 公司，组织名称这信息点结果保存为 "key_organization" 字段。
+3. 人名这信息点，结果保存为 "key_name" 字段。
+4. 常见的网络流行语，结果保存为 "key_internet_slang" 字段。
+5. 文章的情绪，分为积极，消极，中立三种，结果保存为 "key_feeling" 字段。
+
+其中 homework/keyword/keyword_output.jsonl 每条信息格式如下：
+{"title": "Canada will be part of the US within the next decade or so.", 
+"article": "Usually when a leader resigns, a lot of internal struggles are happening. In this case, Canada's economy looks to be in utter shambles. Same thing happened with USSR in '91. In order to mitigate the effects of their decline, Canada will want to become part of the US and the US will definitely welcome them in because together, with all the resources both countries have and them being linguistically and culturally quite similar (as both countries are north of Mesoamerica), they would be a very powerful nation. The economies of both countries are already super connected... to the point where when the US economy is good or bad, Canada's economy follows.", 
+"id": 423, 
+"url": "https://www.reddit.com/r/TrueUnpopularOpinion/comments/1hvn1ae/canada_will_be_part_of_the_us_within_the_next/", 
+"time": "2024-12-23", 
+"key_area": ["US", "Canada", "Mesoamerica", "USSR"],
+ "key_organization": [], 
+"key_name": [], 
+"key_internet_slang": [], 
+"key_feeling": "中立",
+ "Good": 0, 
+"Bad": 0}
+
+
+homework/image_large/title_keyword.jsonl 每条信息格式如下：
+{"id": 2, 
+"title": "Trump and Vance humiliate them selves infront of the world.",
+ "url": "https://i.redd.it/kl2rtgklaxle1.jpeg", 
+"time": "2025-02-28",
+ "relative_path": "images/3.jpeg",
+ "key_area": [], 
+"key_organization": ["Trump"], 
+"key_name": ["Vance"], 
+"key_internet_slang": [], 
+"key_feeling": "中立", 
+"Good": 0, 
+"Bad": 0} 
+
+
+对于 homework/keyword/keyword_output.jsonl 和 homework/image_large/title_keyword.jsonl 中的所有信息点，分别被保存在 homework/keyword/statistics_report.jsonl 和 homework/image_large/title_statistics_report.jsonl 中，每条具体信息点，格式如下：
+
+{"信息点类名": "key_area", "信息点具体名称": "USA", "具体数目": 11, "包含文章ID列表": [24, 124, 233, 242, 287, 296, 335, 548, 588, 751, 783]}
+
+我当前的代码已经根据这个用python做一个前端，保存在 homework/draw_window_report.py。对于前端，根据 homework/statistics_report.jsonl ，使用两个选项表，第一个选的是查询哪一类信息点，第二个选项表的内容是第一个选项表的信息点类的具体有哪些（当第一个选项表未被选时，第二个选项表不可选），比如第一个选项表选“人名”，第二个选项表就根据第一个表的所选选项，提供“Trump”，"Li Bai"，“Tom” 之类的的选项。在两个选项表都进行了选择后，点击查询按钮，下面就会有一个个框，一个框对应一条通过  "包含文章ID列表" 在 homework/keyword_output.jsonl  中被查询到的信息，每个框内分三个部分：
+一：Title，内容为 title" 字段内容，
+二：Article:内容为"article"字段内容。
+三:：Good/Bad，显示点赞和点踩数，内容为Good/Bad字段内容，
+并给出两个按钮，赞和踩，每点一下就该信息的对应字段的数字加一，并实时保存到 homework/keyword_output.jsonl 中。
+
+
+我需要新增一个 “Image Mode” 按钮，当这个按钮没开的时候，是以上内容，当这个按钮开启的时候。
+点击查询按钮，下面就会有一个个框，一个框对应一条通过  "包含文章ID列表" 在 homework/image_large/title_keyword.jsonl 中被查询到的信息，每个框内分三个部分：
+一：Title，内容为 title" 字段内容。
+二：Image: 内容为对应条目的 "relative_path" 字段的图片（比如  "relative_path": "images/3.jpeg" ，那么图片为 homework/image_large/images/3.jpeg ）。
+三:：Good/Bad，显示点赞和点踩数，内容为Good/Bad字段内容，
+
+并给出两个按钮，赞和踩，每点一下就该信息的对应字段的数字加一，并实时保存到 homework/image_large/title_keyword.jsonl  中。
+
+
+
+
+
