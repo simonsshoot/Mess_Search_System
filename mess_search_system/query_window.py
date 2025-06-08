@@ -344,7 +344,105 @@ class MainWindow(QMainWindow):
             content.setMaximumHeight(100)
             layout.addWidget(content)
         
+        # 添加反馈按钮部分 === 新增内容开始 ===
+        feedback_layout = QHBoxLayout()
+        feedback_layout.addStretch()  # 在按钮前添加弹性空间
+        feedback_label = QLabel("Is this result helpful?")
+        feedback_label.setStyleSheet("font-size: 14px; color: #666666;")
+        feedback_layout.addWidget(feedback_label)
+        
+        # YES按钮
+        yes_btn = QPushButton("YES")
+        yes_btn.setFixedSize(80, 30)
+        yes_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #27ae60;
+                color: white;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+            QPushButton:hover {
+                background-color: #219653;
+            }
+        """)
+        yes_btn.clicked.connect(lambda: self.feedback_response(result, True))
+        feedback_layout.addWidget(yes_btn)
+        
+        # NO按钮
+        no_btn = QPushButton("NO")
+        no_btn.setFixedSize(80, 30)
+        no_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #e74c3c;
+                color: white;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+            QPushButton:hover {
+                background-color: #c0392b;
+            }
+        """)
+        no_btn.clicked.connect(lambda: self.feedback_response(result, False))
+        feedback_layout.addWidget(no_btn)
+        
+        # 设置按钮间距
+        feedback_layout.setSpacing(10)
+        layout.addLayout(feedback_layout)
+        # === 新增内容结束 ===
+        
         return card
+
+    # === 新增的反馈处理方法 ===
+    def feedback_response(self, result, is_helpful):
+        """处理用户反馈"""
+        doc_type = "image" if self.image_mode else "text"
+        doc_id = result.image_id if self.image_mode else result.doc_id
+        feedback = "YES" if is_helpful else "NO"
+        
+        print(f"用户反馈: {feedback}")
+        print(f"文档类型: {doc_type}")
+        print(f"文档ID: {doc_id}")
+        
+                # 获取当前时间
+        current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        
+        # 记录查询词
+        query = self.search_input.text().strip()
+        
+        # 准备写入文件的数据
+        feedback_data = {
+            'timestamp': current_time,
+            'doc_type': doc_type,
+            'doc_id': doc_id,
+            'feedback': feedback,
+            'query': query,
+            'rank': self.current_rank,  # 新增当前结果的排名
+            'mode': "image" if self.image_mode else "text"  # 当前搜索模式
+        }
+        
+        # 确保反馈目录存在
+        feedback_dir = "feedback"
+        os.makedirs(feedback_dir, exist_ok=True)
+        
+        # 写入到文件
+        try:
+            with open(os.path.join(feedback_dir, "user_feedback.txt"), "a", encoding="utf-8") as f:
+                f.write("\t".join([
+                    feedback_data['timestamp'],
+                    feedback_data['query'],
+                    str(feedback_data['rank']),
+                    feedback_data['mode'],
+                    feedback_data['doc_type'],
+                    str(feedback_data['doc_id']),
+                    feedback_data['feedback']
+                ]) + "\n")
+            # 显示反馈已收到的消息
+            self.statusBar().showMessage(f"感谢您的反馈！已记录为{'有帮助' if is_helpful else '无帮助'}", 3000)
+        
+        except Exception as e:
+            error_msg = f"保存反馈失败: {str(e)}"
+            self.statusBar().showMessage(error_msg, 5000)
+            print(error_msg)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Search Engine')
